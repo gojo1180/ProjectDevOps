@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Legends</title>
+    <link rel="stylesheet" href="ml.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="Rimberio (1).png">
+</head>
+<body>
+
+    <header>
+        <a href="#default" class="logo"><img src="../../IMG/Rimberio (1).png" alt="" width="200px" height="auto"></a>
+        <input type="search" name="cari" id="searchInput" placeholder="Cari Game...">
+        <div id="searchResults"></div>
+        <div class="header-right">
+            <a id="home" class="active" href="../Home.html">Home</a>
+            <a id="SignIn" href="../signin/signin.html">Sign In</a>
+        </div>
+    </header>
+    <br>
+    <div class="container">
+        <div class="card">
+            <div class="image-container">
+                <img src="logo ml.jpg" alt="Mobile Legends">
+            </div>
+            <div class="content">
+                <h1>Mobile Legends</h1>
+                <p>Untuk mengetahui User ID Anda, Silakan Klik menu profile dibagian kiri atas pada menu utama game. Dan user ID akan terlihat dibagian bawah Nama Karakter Game Anda. Silakan masukkan User ID dan Zone ID Anda untuk menyelesaikan transaksi.Masukkan 12345678 di User ID dan 1234 di Zone ID (Contoh: 12345678(1596))</p>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="step">
+                <div class="step-header">
+                    <h3><span>1</span> Masukkan ID Mobile Legends</h3>
+                </div>
+                <div class="step-body">
+                    <input id="riot-id-input" type="text" placeholder="Masukkan ID Mobile Legends (Contoh:12345678(1596))" required>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-header">
+                <h3><span>2</span> Pilih Kategori & Item</h3> 
+                </div>
+
+                <div class="category">
+                    <div class="category-item active" data-category="diamonds"><p>Diamonds</p>
+                        <img src="gambar_diamond_ml-removebg-preview.png" width="80%" height="100px" alt="Diamonds">
+                    </div>
+                    <div class="category-item" data-category="starlight"><p>Starlight</p>
+                        <img src="Starlight_ml_icon2-removebg-preview.png" width="80%" height="100px" alt="StarLight">
+                    </div>
+                </div>
+
+                <div class="step-body">
+                    <h3>Pilih Items</h3>
+                    <div class="item-grid" id="item-container">
+                        <a href="#kocak" class="item" data-price="11800">
+                            <img src="logo diamonds ml projek.webp" alt="">
+                            <div class="item-info">
+                                <p>11 Diamonds</p>
+                            </div>
+                            <div class="item-price-box">
+                                <p class="price">Rp. 3.000</p>
+                            </div>
+                        </a>
+                        <div class="item" data-price="58000">
+                            <img src="logo diamonds ml projek.webp" alt="">
+                            <div class="item-info">
+                                <p>44 Diamonds</p>
+                            </div>
+                            <div class="item-price-box">
+                                <p class="price">Rp. 10.500</p>
+                            </div>
+                        </div>
+                        <div class="item" data-price="176000">
+                            <img src="logo diamonds ml projek.webp" alt="">
+                            <div class="item-info">
+                                <p>85 Diamonds</p>
+                            </div>
+                            <div class="item-price-box">
+                                <p class="price">Rp. 21.000</p>
+                            </div>
+                        </div>
+                        <div class="item" data-price="381000">
+                            <img src="logo diamonds ml projek.webp" alt="">
+                            <div class="item-info">
+                                <p>179 Diamonds</p>
+                            </div>
+                            <div class="item-price-box">
+                                <p class="price">Rp. 55.000</p>
+                            </div>
+                        </div>
+                        <div class="item" data-price="583000">
+                            <img src="logo diamonds ml projek.webp" alt="">
+                            <div class="item-info">
+                                <p>390 diamonds</p>
+                            </div>
+                            <div class="item-price-box">
+                                <p class="price">Rp. 110.000</p>
+                            </div>
+                        </div>
+                        <div class="item" data-price="1203000">
+                            <img src="logo diamonds ml projek.webp" alt="">
+                            <div class="item-info">
+                                <p>2370 Diamonds</p>
+                            </div>
+                            <div class="item-price-box">
+                                <p class="price">Rp. 600.000</p>
+                            </div>
+                        </div>
+
+                        <div class="battle" data-price="1203000">
+                            <img src="logo mobile_legends_starlight.webp" width="40px" height="40px" alt="">
+                            <div class="item-info">
+                                <p>Starlight member card</p>
+                            </div>
+                            <div class="item-price-box">
+                                <p class="price">Rp. 148.000</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-header">
+                    <h3><span>3</span> Jumlah Yang Dipesan</h3>
+                </div>
+                <div class="step-body">
+                    <div class="input-box">
+                        <label for="quantity">Masukkan Jumlah:</label>
+                        <input type="number" id="quantity" min="1" max="100" value="1" oninput="validateInput()" value="1" placeholder="Masukkan jumlah angka">
+                    </div>
+                </div>
+            </div>
+            <div class="payment-methods">
+                <div class="step-header">
+                    <h3><span>4</span> Payment</h3>
+                </div>
+                <h2>E-Wallet dan QRIS</h2>
+                <div class="payment-grid selected" id="item-container">
+                    <div class="methode">
+                        <img  src="gopay.webp" alt="">
+                        <p id="totalPayment1">0</p>    
+                    </div>
+                    <div class="methode">
+                        <img src="dana.webp" alt="">
+                        <p id="totalPayment2">0</p>   
+                    </div>
+                    <div class="methode">
+                        <img src="qris.webp" alt="">
+                        <p id="totalPayment3">0</p>  
+                    </div>
+                    <div class="methode">
+                        <img src="ovo.webp" alt="">
+                        <p id="totalPayment4">0</p>  
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <button id="buy-now">Beli Sekarang</button>
+            </div>
+        </div>
+    </div> 
+    
+    
+    <!-- The Modal -->
+    <div id="popup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Detail Pembelian</h2>
+            <p>UID: <span id="popup-riot-id"></span></p>
+            <p>Total Pembelian: <span id="popup-amount">Rp. 0</span></p>
+            <p>Metode Pembayaran:</p>
+            <div class="payment-method">
+                <img id="popup-method-img" src="" alt="Metode Pembayaran" width="100">
+            </div>
+            <p>QR Code:</p>
+            <div class="qr-code">
+                <img id="popup-qr" src="WhatsApp Image 2024-06-23 at 07.58.48_bf474999.jpg" alt="QR Code" width="200">
+            </div>
+            <button id="konfirmasi" class="Konfirmasi" onclick="confirmPurchase()">Konfirmasi</button>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSuccessPopup()">&times;</span>
+            <h2>Pembayaran Berhasil</h2>
+            <p>Terima kasih atas pembelian Anda!</p>
+            <button id="close" onclick="closeSuccessPopup()">Tutup</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="desk">
+        <h4>Top Up Game Play Store App Store dan Beli Voucher Game Murah di Arzefy</h4>
+        <br>
+        <p>Arzefy adalah titik fokus bagi para gamer yang mencari solusi top up game dengan harga terbaik. Kami menjadi destinasi utama untuk top up game dengan layanan yang tidak hanya tercepat, terpercaya, namun juga anti minus. Menawarkan kemudahan bagi para pengguna untuk top up game favorit mereka, kami menjamin pengalaman top up yang efisien, bebas risiko, dan sepenuhnya terjamin. Ditusi menyediakan ragam opsi top up game dengan harga yang bersahabat, menjadikan kami pilihan unggul bagi mereka yang mengutamakan kecepatan, keamanan, dan keandalan dalam setiap transaksi top up. Temukan kemudahan top up yang tak tertandingi di Ditusi, di mana kepuasan pengguna menjadi prioritas utama kami.</p>
+            <br>
+        <h4>Keuntungan Top Up Game di Arzefy</h4>
+        <li>Proses transaksi top up cepat dan mudah</li>
+        <br>
+        <li>Menyediakan product top up game yang lengkap</li><br>
+        <li>Tempat top up dengan harga murah</li><br>
+        <li>Tempat top up yang menyediakan banyak metode pembayaran</li><br>
+        <li>Tempat top up anti rate off gacha selalu wangi</li><br>
+        <li>Tempat top up terpercaya, 1000% aman dan legal</li><br>
+        <br><br>
+        
+    </div>
+    <div class="sos">
+        <div class="ogo">
+    <img src="Rimberio (1).png" width="250px" height="100px">
+</div>
+<div class="sosmed">
+    <a href="https://www.instagram.com/arzefy_gamingstore/"><i class="fa fa-instagram"> Instagram</i></a>
+    <a href=""><i class="fa fa-facebook"> Facebook</i></a>
+</div>
+</div>
+    </footer>
+<script src="jquery-1.8.3.js"></script>
+<script src="ml.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

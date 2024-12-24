@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzefy Gaming Store</title>
+    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="Logo1.png">
+    <script type="text/javascript" src="jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="signin.js"></script>
+
+</head>
+
+<body>
+         <header>
+        <a href="#default" class="logo"><img src="../../IMG/Rimberio (1).png" alt="" width="200px" height="auto"></a>
+        <input type="search" name="cari" id="searchInput" placeholder="Cari Game...">
+        <div id="searchResults"></div>
+        <div class="header-right">
+            <a id="home" class="active" href="../Home.html">Home</a>
+            <a id="SignIn" href="../signin/signin.html">Sign In</a>
+        </div>
+    </header>
+    <main>   
+
+        <div class="signup">
+            <span>Belum Daftar?</span>
+            <button id="login" type="button">Sign up</button>
+        </div>
+
+        <div class="login">
+            <span>Sudah Punya Akun?</span>
+            <button id="login" type="button">Login</button>
+        </div>
+
+        <div class="back-layer">
+            <form action="" class="login-form active" id="loginForm">
+                <h2>Sign In</h2>
+                <label for="lemail">Email</label>
+                <input type="email" id="lemail" placeholder="Masukkan Email">
+                <div id="lemailError" class="error"></div>
+                <label for="lpassword">Password</label>
+                <input type="password" id="lpassword" placeholder="*****">
+                <div id="lpasswordError" class="error"></div>
+                <button id="login" type="button" onclick="validateLogin()">Login</button>
+            </form>
+
+            <form action="" class="signup-form" id="signupForm">
+                <h2>Sign Up</h2>
+                <label for="name">Username</label>
+                <input type="text" id="name" placeholder="Masukkan Username">
+                <div id="nameError" class="error"></div>
+                <label for="hp">NO HP</label>
+                <input type="number" id="hp" placeholder="Masukkan No HP">
+                <div id="hpError" class="error"></div>
+                <label for="semail">Email</label>
+                <input type="email" id="semail" placeholder="Masukkan Email">
+                <div id="semailError" class="error"></div>
+                <label for="spassword">Password</label>
+                <input type="password" id="spassword" placeholder="*****">
+                <div id="spasswordError" class="error"></div>
+                <button id="sign" type="button" onclick="validateSignup()">Sign up</button>
+            </form>
+        </div>
+
+    </main>
+    <script type="text/javascript" src="search.js"></script>
+</body>
+</html>
